@@ -1,0 +1,7 @@
+<!--pages/dishesList/index.wxml-->
+<scroll-view scroll-y style="height:{{scrollHeight}}rpx" bindscrolltolower="loadMore">
+    <view class="flex flex_row flex_align_center dishesList-list-item" wx:for="{{list}}" wx:key="{{index}}" bindtap="pushToDetail" data-item="{{item}}">
+        <text class="dishesList-list-item-text">{{item.name}}</text>
+    </view>
+    <component-loading-page show="{{list==null}}"></component-loading-page>
+</scroll-view>

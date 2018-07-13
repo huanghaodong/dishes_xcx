@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="index-container bg_1296db flex flex_col flex_align_center">
+    <view class="index-search-box bg_ffffff flex flex_row flex_align_center {{iptDisabled?'disabled':'unDisabled'}}" bindtap="tapSearchBox">
+        <input value="{{iptDisabled?'':value}}" disabled="{{iptDisabled}}" bindinput="bindInput"  focus="{{!iptDisabled}}" bindconfirm="search" bindblur="blur" confirm-type="search" class="flex_1 h_100" />
+        <view class="index-searchIcon-box flex flex_center" bindtap="search">
+             <text class="iconfont icon-search color_1296db font_50"></text>
+        </view>
+    </view>
+</view>

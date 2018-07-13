@@ -1,0 +1,9 @@
+<!--pages/categroy/index.wxml-->
+<scroll-view scroll-y style="height:{{scrollHeight}}rpx">
+  <picker wx:for="{{list}}" wx:key="{{index}}" bindchange="bindPickerChange" range="{{item.list}}" range-key="name" data-index="{{index}}">
+    <view class="flex flex_row flex_center categroy-list-item">
+        <text class="categroy-list-item-text">{{item.name}}</text>
+    </view>
+  </picker>
+  <component-loading-page show="{{list==null}}"></component-loading-page>
+</scroll-view>

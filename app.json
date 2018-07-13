@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/categroy/index",
+    "pages/me/index",
+    "pages/dishesList/index",
+    "pages/searchDishesList/index",
+    "pages/detail/index",
+    "pages/getUserInfoAuthority/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "菜谱",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/index.png",
+        "selectedIconPath": "assets/images/index_checked.png"
+      },
+      {
+        "pagePath": "pages/categroy/index",
+        "text": "分类",
+        "iconPath": "assets/images/categroy.png",
+        "selectedIconPath": "assets/images/categroy_checked.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的",
+        "iconPath": "assets/images/me.png",
+        "selectedIconPath": "assets/images/me_checked.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

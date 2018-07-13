@@ -1,0 +1,23 @@
+/**index.wxss**/
+
+.index-container{
+    width:100%;
+    height:100%;
+}
+.index-search-box{
+    width:90%;
+    height:110rpx;
+    margin-top:30%;
+    border-radius:4rpx;
+    box-sizing:border-box;
+    padding-left:30rpx;
+}
+.index-searchIcon-box{
+    height:100%;
+    width:110rpx;
+    transform:translateX(0rpx);
+    transition:all .3s linear;
+}
+.disabled .index-searchIcon-box{
+    transform:translateX(-282.5rpx);
+}

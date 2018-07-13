@@ -1,0 +1,5 @@
+<!--pages/me/index.wxml-->
+<view class="bg_ffffff w_100 h_100 flex flex_col flex_align_center">
+    <image src="{{info.avatarUrl}}" class="me-image" />
+    <view class="me-name color_000000 font_weight_600 font_36">{{info.nickName}}</view>
+</view>

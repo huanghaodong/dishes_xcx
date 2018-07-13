@@ -1,0 +1,11 @@
+/* pages/me/index.wxss */
+
+.me-image{
+    margin-top:100rpx;
+    border-radius:50%;
+    width:200rpx;
+    height:200rpx;
+}
+.me-name{
+    margin-top:100rpx;
+}

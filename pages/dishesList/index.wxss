@@ -1,0 +1,7 @@
+/* pages/dishesList/index.wxss */
+.dishesList-list-item{
+    height:100rpx;
+}
+.dishesList-list-item-text{
+    margin-left:30rpx;
+}

@@ -1,0 +1,96 @@
+/*flex布局*/
+.flex{
+    display:flex;
+}
+.flex_1{
+    flex:1;
+}
+.flex_row{
+    flex-direction:row;
+}
+.flex_col{
+    flex-direction:column;
+}
+.flex_justify_start{
+    justify-content:flex-start;
+}
+.flex_justify_end{
+    justify-content:flex-end;
+}
+.flex_justify_center{
+    justify-content:center;
+}
+.flex_justify_around{
+    justify-content:space-around;
+}
+.flex_justify_between{
+    justify-content:space-between;
+}
+.flex_align_start{
+    align-items:flex-start;
+}
+.flex_align_end{
+    align-items:flex-end;
+}
+.flex_align_center{
+    align-items:center;
+}
+.flex_center{
+    justify-content:center;
+    align-items:center;
+}
+.flex_warp{
+    flex-wrap:wrap;
+}
+
+/*内容格式*/
+.t_center{
+    text-align: center;
+}
+.t_left{
+    text-align: left;
+}
+.t_right{
+    text-align: right;
+}
+.v_middle{
+    vertical-align:middle;
+}
+
+/*字体加粗*/
+.font_weight_400{
+    font-weight:400;
+}
+.font_weight_500{
+    font-weight:500;
+}
+.font_weight_600{
+    font-weight:600;
+}
+.font_weight_700{
+    font-weight:700;
+}
+.font_weight_900{
+    font-weight:900;
+}
+
+/*单行省略号*/
+.text-overflow-one{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+/*2行省略号*/
+.text-overflow-two{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.w_100{
+    width:100%;
+}
+.h_100{
+    height:100%;
+}

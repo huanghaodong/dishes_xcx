@@ -1,0 +1,7 @@
+<!--pages/detail/index.wxml-->
+<scroll-view scroll-y style="height:{{scrollHeight}}rpx" bindscrolltolower="loadMore">
+    <view class="detail-box">
+        <view class="detail-name">{{info.name}}</view>
+        <view class="detail-content">{{info.content}}</view>
+    </view>
+</scroll-view>
