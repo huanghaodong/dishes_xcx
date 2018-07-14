@@ -1,7 +1,41 @@
 <!--pages/detail/index.wxml-->
 <scroll-view scroll-y style="height:{{scrollHeight}}rpx" bindscrolltolower="loadMore">
-    <view class="detail-box">
-        <view class="detail-name">{{info.name}}</view>
-        <view class="detail-content">{{info.content}}</view>
+    <image class="detail-image w_100" src="{{info.pic}}" mode="widthFix">
+        <view class="detail-image-bar color_ffffff font_32 font_weight_600 text-overflow-one">{{info.name}}</view>
+    </image>
+    <view class="detail-tit font_28 font_weight_600 color_000000">推荐理由</view>
+    <view class="detail-contentBox bg_ffffff">
+        <text class="detail-content font_24 color_000000">{{info.content}}</text>
+    </view>
+    <view class="detail-tit font_28 font_weight_600 color_000000">描述</view>
+    <view class="detail-desc-box bg_ffffff">
+        <view class="detail-desc-item flex flex_row flex_align_center">
+            <text class="iconfont icon-renshu detail-icon"></text>
+            <text class="detail-desc-txt font_24 color_ff6a37">{{info.peoplenum}}</text>
+        </view>
+        <view class="detail-desc-item flex flex_row flex_align_center">
+            <text class="iconfont icon-shijian detail-icon"></text>
+            <text class="detail-desc-txt font_24 color_ff6a37">{{info.cookingtime}}</text>
+        </view>
+        <view class="detail-desc-item flex flex_row flex_align_center">
+            <text class="iconfont icon-biaoqian detail-icon"></text>
+            <view class="detail-desc-tags flex flex_row">
+                <view class="detail-tag font_16 tag-style-{{index}}" wx:for="{{info.tag}}" wx:if="{{index<5}}">{{item}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="detail-tit font_28 font_weight_600 color_000000">主料</view>
+    <view class="detail-material-box bg_ffffff">
+        <view class="detail-material-item flex flex_row flex_align_center" wx:for="{{info.material}}">
+            <text class="flex_1 t_left font_24 color_000000">{{item.mname}}</text>
+            <text class="flex_1 t_left font_24 color_000000">{{item.amount}}</text>
+        </view>
+    </view>
+    <view class="detail-tit font_28 font_weight_600 color_000000">步骤</view>
+    <view class="detail-process-box bg_ffffff">
+        <view class="detail-process-item flex flex_col flex_align_center" wx:for="{{info.process}}">
+            <image class="detail-process-image" mode="widthFix" src="{{item.pic}}"></image>
+            <text class="detail-process-txt font_24 color_000000">{{index+1+'、'+item.pcontent}}</text>
+        </view>
     </view>
 </scroll-view>

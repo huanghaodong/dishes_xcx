@@ -21,3 +21,42 @@
 .disabled .index-searchIcon-box{
     transform:translateX(-282.5rpx);
 }
+.index-history-box{
+   width: 90%;
+    margin-top: 30rpx;
+
+}
+.index-history-item{
+    padding: 30rpx;
+    color: #8a8a8a;
+    border-radius: 6rpx;
+    position: relative;
+    margin-right: 20rpx;
+    margin-bottom: 30rpx;
+    min-width: 140rpx;
+    box-sizing: border-box;
+}
+.index-icon-deleteAll{
+    font-size: 24rpx;
+    color: #ffffff;
+    padding: 10rpx;
+}
+.index-icon-close{
+    font-size: 16rpx;
+    color: #8a8a8a;
+    position: absolute;
+    right: 0rpx;
+    top: 0rpx;
+    padding: 10rpx;
+}
+.index-history-tit{
+    height: 100rpx;
+    width: 90%;
+    margin-top: 100rpx;
+}
+.index-col-line{
+    width: 10rpx;
+    height: 40rpx;
+    background-color: #ffffff;
+    margin-right: 30rpx;
+}

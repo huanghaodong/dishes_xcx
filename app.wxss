@@ -18,6 +18,9 @@ page{
 .color_000000{
     color:#000000;
 }
+.color_ff6a37{
+    color:#ff6a37;
+}
 /**背景颜色**/
 .bg_ffffff{
     background-color:#ffffff;
@@ -29,6 +32,12 @@ page{
     background-color:#1296db;
 }
 /**字体大小**/
+.font_16{
+    font-size: 16rpx;
+}
+.font_18{
+    font-size: 18rpx;
+}
 .font_24{
     font-size:24rpx;
 }

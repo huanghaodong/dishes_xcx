@@ -15,8 +15,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let info = JSON.parse(options.item);
+    let reg=/<[^>]+>/gim;
+    info.content = info.content.replace(reg,"");
     this.setData({
-      info:JSON.parse(options.item),
+      info,
       scrollHeight:app.globalData.useableHeight
     })
   }

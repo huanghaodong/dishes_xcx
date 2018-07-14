@@ -38,6 +38,9 @@ Page({
       keyword:keyword+'',
       num:20
     },(data)=>{
+        data.result.list.forEach((v)=>{
+              v.tag = v.tag.split(',');
+        })
       this.setData({
         list:data.result.list
       })

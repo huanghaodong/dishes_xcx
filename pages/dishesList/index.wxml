@@ -1,7 +1,17 @@
 <!--pages/dishesList/index.wxml-->
 <scroll-view scroll-y style="height:{{scrollHeight}}rpx" bindscrolltolower="loadMore">
-    <view class="flex flex_row flex_align_center dishesList-list-item" wx:for="{{list}}" wx:key="{{index}}" bindtap="pushToDetail" data-item="{{item}}">
-        <text class="dishesList-list-item-text">{{item.name}}</text>
+    <view class="flex flex_row flex_align_center dishesList-list-item bg_ffffff" wx:for="{{list}}" wx:key="{{index}}" bindtap="pushToDetail" data-item="{{item}}">
+        <view class="dishesList-list-item-imageBox">
+            <image src="{{item.pic}}" class="dishesList-list-item-image"></image>
+        </view>
+        <view class="dishesList-list-item-box flex  flex_col flex_justify_between">
+            <view class="dishesList-list-item-name font_32 color_000000 text-overflow-one">{{item.name}}</view>
+            <text class="dishesList-list-item-peoplenum font_24 color_ff6a37">{{item.peoplenum}}</text>
+            <text class="dishesList-list-item-preparetime font_24 color_ff6a37" >{{item.preparetime}}</text>
+            <view class="dishesList-list-item-tags flex flex_row">
+                <view class="dishesList-list-tag font_16 tag-style-{{index}}" wx:for="{{item.tag}}" wx:if="{{index<5}}">{{item}}</view>
+            </view>
+        </view>
     </view>
     <component-loading-page show="{{list==null}}"></component-loading-page>
 </scroll-view>

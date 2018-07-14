@@ -54,6 +54,9 @@ Page({
       if(+data.result.num<20){
         this.data.hasMore = false;
       }
+      data.result.list.forEach((v)=>{
+        v.tag = v.tag.split(',');
+      })
       let arr = this.data.start == 0  ? data.result.list : this.data.list.concat(data.result.list);
       this.setData({
         list:arr

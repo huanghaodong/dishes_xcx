@@ -1,7 +1,49 @@
-/* pages/dishesList/index.wxss */
 .dishesList-list-item{
-    height:100rpx;
+    height:190rpx;
+    padding: 0 26rpx;
 }
-.dishesList-list-item-text{
+.dishesList-list-item-imageBox{
+    width: 160rpx;
+    height: 160rpx;
+}
+.dishesList-list-item-image{
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 6rpx;
+}
+.dishesList-list-item-box{
     margin-left:30rpx;
+    height: 160rpx;
+}
+.dishesList-list-item-name{
+    max-width: 500rpx;
+}
+.dishesList-list-item-peoplenum{
+
+}
+.dishesList-list-tag{
+    padding:5rpx 10rpx;
+
+    margin-right: 10rpx;
+    border-radius: 4rpx;
+}
+.tag-style-0{
+    border: 1rpx solid #1296db;
+    color: #1296db;
+}
+.tag-style-1{
+    border: 1rpx solid #dd5145;
+    color: #dd5145;
+}
+.tag-style-2{
+    border: 1rpx solid #18a15f;
+    color: #18a15f;
+}
+.tag-style-3{
+    border: 1rpx solid #ffce44;
+    color: #ffce44;
+}
+.tag-style-4{
+    border: 1rpx solid #8a8a8a;
+    color: #8a8a8a;
 }

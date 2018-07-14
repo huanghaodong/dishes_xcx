@@ -1,5 +1,87 @@
 /* pages/detail/index.wxss */
 
-.detail-box{
+.detail-image{
+    position: relative;
+}
+.detail-image-bar{
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: rgba(0,0,0,0.5);
+    left: 0;
+    bottom: 0;
+}
+.detail-contentBox{
+    padding: 30rpx;
+    text-indent:50rpx;
 
+}
+.detail-content{
+}
+.detail-desc-box{
+    padding: 30rpx;
+}
+.detail-desc-item{
+    margin-bottom: 20rpx;
+}
+.detail-icon{
+    color: #8a8a8a;
+    font-size: 36rpx;
+}
+.detail-desc-tags{
+    margin-left: 30rpx;
+}
+.detail-desc-txt{
+    margin-left: 30rpx;
+}
+.detail-tag{
+    padding:5rpx 10rpx;
+
+    margin-right: 10rpx;
+    border-radius: 4rpx;
+}
+.tag-style-0{
+    border: 1rpx solid #1296db;
+    color: #1296db;
+}
+.tag-style-1{
+    border: 1rpx solid #dd5145;
+    color: #dd5145;
+}
+.tag-style-2{
+    border: 1rpx solid #18a15f;
+    color: #18a15f;
+}
+.tag-style-3{
+    border: 1rpx solid #ffce44;
+    color: #ffce44;
+}
+.tag-style-4{
+    border: 1rpx solid #8a8a8a;
+    color: #8a8a8a;
+}
+.detail-material-box{
+    padding: 0 30rpx;
+}
+.detail-material-item{
+    height: 80rpx;
+    border-bottom: 1rpx solid #f1f1f1;
+}
+.detail-tit{
+    padding: 20rpx 30rpx;
+}
+.detail-process-box{
+    padding: 30rpx;
+}
+.detail-process-txt{
+    padding: 30rpx 0 0 0;
+}
+.detail-process-item{
+    margin-top: 30rpx;
+}
+.detail-process-image{
+    width: 60%;
 }

@@ -2,10 +2,14 @@
 
 .categroy-list-item{
     height:120rpx;
-    border-bottom:1rpx solid #1296db;
-    color:#1296db;
-    text-align:center;
+    border-bottom:1rpx solid #f1f1f1;
+}
+.categroy-list-item-icon{
+   width:50rpx;
+    margin-left: 40rpx;
 }
 .categroy-list-item-text{
-
+    margin-left: 252rpx;
+    color:#1296db;
+    font-size: 30rpx;
 }
