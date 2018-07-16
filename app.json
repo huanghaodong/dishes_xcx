@@ -11,7 +11,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "菜谱",
+    "navigationBarTitleText": "思思菜谱",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

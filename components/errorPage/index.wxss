@@ -1,0 +1,15 @@
+.errorPage{
+    width:100%;
+    height:100%;
+ 	display: flex;
+ 	background:#ffffff;
+ 	flex-direction:column;
+ 	align-items:center;
+ 	justify-content:center;
+ }
+ .err-txt{
+    font-size:24rpx;
+    color:#8a8a8a;
+    margin-top:30rpx;
+    text-align:center;
+ }

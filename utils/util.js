@@ -349,6 +349,11 @@ function post(_url,_postData , successBack, errorBack, failBack){
         }
       }else {
         if (errorBack){
+          wx.showToast({
+            title: res.data.msg,
+            icon:'none',
+            duration: 2000
+          })
           errorBack(res.data.msg)
         }else{
           wx.showToast({

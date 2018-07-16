@@ -6,7 +6,8 @@ Page({
   data: {
     iptDisabled:true,
     value:'',
-    historyRecord:null
+    historyRecord:null,
+    showHistory:false
   },
   onShow:function () {
     let data = this._getItem('searchRecord')
@@ -40,8 +41,11 @@ Page({
     if(value.trim()=='') return;
     let recordList = [];
     this._getItem('searchRecord') && (recordList = this._getItem('searchRecord'));
-    for(let i of recordList){
-        if (recordList[i] == value) return;
+    for(let i=0,len=recordList.length;i<len;i++){
+      if(recordList[i] == value){
+        recordList.splice(i,1);
+        break;
+      }
     }
     recordList.unshift(value);
     if (recordList.length > 10) {
@@ -80,13 +84,12 @@ Page({
           historyRecord:this.data.historyRecord
       })
       let recordList = this._getItem('searchRecord')
-      for(let i of recordList){
+      for(let i=0,len=recordList.length;i<len;i++){
         if(recordList[i] == value){
-            recordList.splice(i, 1);
-            break;
+          recordList.splice(i, 1);
+          break;
         }
       }
-      this.s
       this._setItem('searchRecord', recordList)
   },
   tapDeleteAll:function () {
@@ -106,6 +109,11 @@ Page({
                 console.log('用户点击取消')
             }
         }
+    })
+  },
+  toggleHistoryBox:function () {
+    this.setData({
+      showHistory:!this.data.showHistory
     })
   }
 })

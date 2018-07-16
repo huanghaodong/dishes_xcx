@@ -3,26 +3,50 @@
 .index-container{
     width:100%;
     height:100%;
+    position:relative;
+}
+.index-box{
+    position:absolute;
+    top:0;
+    left:0;
+    transition:top .2s ease;
+
+}
+.index-bg{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.index-banner-box{
+   margin-top:50rpx;
+   width:90%;
+
 }
 .index-search-box{
     width:90%;
     height:110rpx;
-    margin-top:30%;
     border-radius:4rpx;
     box-sizing:border-box;
     padding-left:30rpx;
+    margin-top:50rpx;
 }
 .index-searchIcon-box{
     height:100%;
     width:110rpx;
     transform:translateX(0rpx);
-    transition:all .3s linear;
+    transition:all .2s linear;
 }
 .disabled .index-searchIcon-box{
     transform:translateX(-282.5rpx);
 }
+.index-history{
+    margin-top: 100rpx;
+    width: 90%;
+}
 .index-history-box{
-   width: 90%;
+    width:100%;
     margin-top: 30rpx;
 
 }
@@ -37,7 +61,7 @@
     box-sizing: border-box;
 }
 .index-icon-deleteAll{
-    font-size: 24rpx;
+    font-size: 34rpx;
     color: #ffffff;
     padding: 10rpx;
 }
@@ -50,13 +74,30 @@
     padding: 10rpx;
 }
 .index-history-tit{
-    height: 100rpx;
-    width: 90%;
-    margin-top: 100rpx;
+    height: 60rpx;
+    width: 100%;
+    border-bottom:2rpx solid #ffffff;
 }
 .index-col-line{
     width: 10rpx;
     height: 40rpx;
     background-color: #ffffff;
     margin-right: 30rpx;
+}
+.index-logo{
+    width:100rpx;
+    height:100rpx;
+    border-radius:10rpx;
+}
+.index-logo-image{
+    width:80rpx;
+}
+.index-history-icon-box{
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+.index-history-icon{
+    font-size:78rpx;
+    color:#fff;
 }

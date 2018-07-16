@@ -1,0 +1,4 @@
+<view class="errorPage" hidden="{{!show}}" bindtap="tap">
+     <image src="../../assets/images/error.png" mode="widthFix" style="width: 100rpx;"></image>
+     <view class="err-txt">破服务器又故障了，点我刷新试试</view>
+</view>

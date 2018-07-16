@@ -1,3 +1,3 @@
-<view class="udot-loadingPage" hidden="{{!show}}">
+<view class="loadingPage" hidden="{{!show}}">
      <image src="../../assets/images/loading.gif" mode="widthFix" style="width: 100rpx;"></image>
 </view>

@@ -18,11 +18,8 @@ Page({
     this.setData({
       scrollHeight:app.globalData.switchTabPageUseableHeight
     })
-    util.post('jisuapi/recipe_class',{},(data)=>{
-      this.setData({
-        list:data.result
-      })
-    })
+    this._getCategroy();
+
   },
   bindPickerChange: function (e) {
     let index = e.target.dataset.index;
@@ -31,5 +28,23 @@ Page({
     wx.navigateTo({
       url: "/pages/dishesList/index?classid="+classId,
     })
+  },
+  refresh:function(){
+    this._getCategroy();
+  },
+  _getCategroy:function(){
+    this.setData({
+      list:null,
+      isError:false
+    })
+    util.post('jisuapi/recipe_class',{},(data)=>{
+      this.setData({
+        list:data.result
+      })
+    },(msg)=>{
+      this.setData({
+        list:[],
+        isError:true
+      })})
   }
 })

@@ -12,7 +12,8 @@ Page({
     classid:'',
     start:0,
     num:20,
-    hasMore:true
+    hasMore:true,
+    isError:false
   },
 
   /**
@@ -31,7 +32,7 @@ Page({
     })
   },
   pushToDetail: function (e) {
-    let item = e.target.dataset.item;
+    let item = e.currentTarget.dataset.item;
     let str = JSON.stringify(item)
     wx.navigateTo({
       url: "/pages/detail/index?item="+str,
@@ -46,11 +47,27 @@ Page({
   //根据分类id获取菜品列表
   getDishesByClassId:function () {
     let {classid,start,num} = this.data;
+    this.setData({
+      list:null,
+      isError:false
+    })
     util.post('jisuapi/byclass',{
       classid,
       start,
       num
     },(data)=>{
+      if(data.status!=='0'){
+        wx.showToast({
+          title: data.msg,
+          icon:'none',
+          duration: 2000
+        })
+        this.setData({
+          list:[],
+          isError:true
+        })
+        return;
+      }
       if(+data.result.num<20){
         this.data.hasMore = false;
       }
@@ -61,6 +78,14 @@ Page({
       this.setData({
         list:arr
       })
+    },(msg)=>{
+      this.setData({
+        list:[],
+        isError:true
+      })
     })
+  },
+  refresh:function () {
+    this.getDishesByClassId();
   }
 })

@@ -7,4 +7,5 @@
     </view>
   </picker>
   <component-loading-page show="{{list==null}}"></component-loading-page>
+  <component-error-page show="{{isError}}"  bindmyevent="refresh"></component-error-page>
 </scroll-view>

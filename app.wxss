@@ -47,6 +47,9 @@ page{
 .font_32{
     font-size:32rpx;
 }
+.font_34{
+    font-size:34rpx;
+}
 .font_36{
     font-size:36rpx;
 }

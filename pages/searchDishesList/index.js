@@ -1,6 +1,7 @@
 // pages/dishesList/index.js
 import util from '../../utils/util';
 const app = getApp()
+let keyword = '';
 Page({
 
   /**
@@ -10,13 +11,14 @@ Page({
     list:null,
     scrollHeight:0,
     num:20,
+    isError:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let {keyword} = options;
+    keyword = options.keyword;
     this.getDishesListBySearch(keyword);
   },
   onReady:function () {
@@ -34,16 +36,51 @@ Page({
     })
   },
   getDishesListBySearch: function (keyword) {
+    this.setData({
+      list:null,
+      isError:false
+    })
     util.post('jisuapi/search',{
       keyword:keyword+'',
       num:20
     },(data)=>{
+      if(data.status!=='0'&&data.status!=='205'){
+        wx.showToast({
+          title: data.msg,
+          icon:'none',
+          duration: 2000
+        })
+        this.setData({
+          list:[],
+          isError:true
+        })
+        return;
+      }
+      if(data.status=='205'){
+        wx.showToast({
+          title: data.msg,
+          icon:'none',
+          duration: 2000
+        })
+        this.setData({
+          list:[],
+        })
+        return;
+      }
         data.result.list.forEach((v)=>{
               v.tag = v.tag.split(',');
         })
       this.setData({
         list:data.result.list
       })
+    },(msg)=>{
+        this.setData({
+          list:[],
+          isError:true
+        })
     })
+  },
+  refresh:function () {
+    this.getDishesListBySearch(keyword);
   }
 })

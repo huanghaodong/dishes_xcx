@@ -1,5 +1,8 @@
 /* pages/me/index.wxss */
 
+.me{
+    position:relative;
+}
 .me-image{
     margin-top:100rpx;
     border-radius:50%;
@@ -8,4 +11,28 @@
 }
 .me-name{
     margin-top:100rpx;
+}
+.me-image-logo{
+    margin-top:100rpx;
+    border-radius:10rpx;
+    width:250rpx;
+    height:250rpx;
+}
+.me_tips{
+    position:absolute;
+    left:0;
+    bottom:0;
+    text-align:center;
+    color:#ccc;
+    font-size:20rpx;
+    height:100rpx;
+    line-height:100rpx;
+}
+.me_qq{
+    margin-top:100rpx;
+    text-align:center;
+    color:#ccc;
+    font-size:20rpx;
+    height:100rpx;
+    line-height:100rpx;
 }
