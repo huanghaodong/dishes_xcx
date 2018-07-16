@@ -30,7 +30,7 @@ Page({
   
   },
   getUserInfo:function(e){
-
+      app.globalData.userInfo = e.detail.userInfo
       //wx.navigateBack();
       wx.reLaunch({
           url:"/pages/index/index"
