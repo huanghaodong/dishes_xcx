@@ -10,7 +10,7 @@
     height:200rpx;
 }
 .me-name{
-    margin-top:100rpx;
+    margin-top:30rpx;
 }
 .me-image-logo{
     margin-top:100rpx;

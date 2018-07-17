@@ -1,20 +1,20 @@
 <!--index.wxml-->
 <view class="index-container">
     <image class="index-bg" src="../../assets/images/searchBg_03.jpg" mode="aspectFill"></image>
-    <view class="index-box w_100 h_100 flex flex_col flex_align_center" style="top:{{showHistory?-400:0}}rpx;">
+    <view class="index-box w_100 h_100 flex flex_col flex_align_center" style="top:{{showHistory?-364.807692:0}}rpx;height:{{switchTabPageUseableHeight+364.807692}}rpx">
         <view class="index-banner-box flex flex_row flex_justify_between flex_align_center">
             <view class="index-logo bg_ffffff flex flex_center">
-                <image src="../../assets/images/logo_lan_toumin.png" mode="widthFix" class="index-logo-image"></image>
+                <image src="../../assets/images/logo_hei_toumin.png" mode="widthFix" class="index-logo-image"></image>
             </view>
             <image src="../../assets/images/banner.png"  mode="widthFix"></image>
         </view>
         <view class="index-search-box bg_ffffff flex flex_row flex_align_center {{iptDisabled?'disabled':'unDisabled'}}" bindtap="tapSearchBox">
             <input value="{{iptDisabled?'':value}}" disabled="{{iptDisabled}}" bindinput="bindInput"  focus="{{!iptDisabled}}" bindconfirm="search" bindblur="blur" confirm-type="search" class="flex_1 h_100" />
             <view class="index-searchIcon-box flex flex_center" bindtap="search">
-                 <text class="iconfont icon-search color_1296db font_50"></text>
+                 <text class="iconfont icon-search color_000000 font_50"></text>
             </view>
         </view>
-        <view class="index-history" hidden="{{!showHistory}}">
+        <view class="index-history flex flex_col" hidden="{{!showHistory}}">
             <view class="index-history-tit  flex flex_row flex_align_center flex_justify_between" >
                 <view class="flex flex_row flex_align_center">
                     <view class="index-col-line"></view>
@@ -22,8 +22,8 @@
                 </view>
                 <text class="iconfont icon-delete index-icon-deleteAll font_weight_600" bindtap="tapDeleteAll"></text>
             </view>
-            <view class="index-history-box flex flex_row flex_warp">
-
+            <view class="index-no-history font_34rpx color_ffffff font_weight_600" hidden="{{historyRecord.length>0}}">暂无搜索历史</view>
+            <view class="flex_1 index-history-box  flex flex_row flex_warp flex">
                 <view class="index-history-item font_24 bg_ffffff flex flex_center" wx:for="{{historyRecord}}" wx:key="{{index}}" data-value="{{item}}" bindtap="tapSearchItem">
                     {{item}}
                     <text class="iconfont icon-close index-icon-close" data-value="{{item}}" data-index="{{index}}" catchtap="tapDelete"></text>

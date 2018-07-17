@@ -9,7 +9,6 @@ Page({
    */
   data: {
     list:null,
-    scrollHeight:0,
     num:20,
     isError:false
   },
@@ -22,12 +21,7 @@ Page({
     this.getDishesListBySearch(keyword);
   },
   onReady:function () {
-    var res = wx.getSystemInfoSync()
-    app.globalData.useableHeight = res.windowHeight * (750 / res.windowWidth);
-    this.setData({
-      scrollHeight:app.globalData.useableHeight
-    })
-  },
+
   pushToDetail: function (e) {
     let item = e.currentTarget.dataset.item;
     let str = JSON.stringify(item)

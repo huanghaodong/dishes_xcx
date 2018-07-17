@@ -1,5 +1,5 @@
 <!--pages/dishesList/index.wxml-->
-<scroll-view scroll-y style="height:{{scrollHeight}}rpx" bindscrolltolower="loadMore">
+<scroll-view scroll-y class="h_100" bindscrolltolower="loadMore">
     <view class="flex flex_row flex_align_center dishesList-list-item bg_ffffff" wx:for="{{list}}" wx:key="{{index}}" bindtap="pushToDetail" data-item="{{item}}">
         <view class="dishesList-list-item-imageBox">
             <image src="{{item.pic}}" class="dishesList-list-item-image"></image>

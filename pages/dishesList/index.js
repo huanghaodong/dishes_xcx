@@ -8,7 +8,6 @@ Page({
    */
   data: {
     list:null,
-    scrollHeight:0,
     classid:'',
     start:0,
     num:20,
@@ -24,13 +23,7 @@ Page({
     this.data.classid = +classid;
     this.getDishesByClassId();
   },
-  onReady:function () {
-    var res = wx.getSystemInfoSync()
-    app.globalData.useableHeight = res.windowHeight * (750 / res.windowWidth);
-    this.setData({
-      scrollHeight:app.globalData.useableHeight
-    })
-  },
+
   pushToDetail: function (e) {
     let item = e.currentTarget.dataset.item;
     let str = JSON.stringify(item)

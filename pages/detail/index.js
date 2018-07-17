@@ -9,7 +9,6 @@ Page({
    */
   data: {
     info:null,
-    scrollHeight:0,
     showSwiper:false,
     current:0,
     isError:false
@@ -30,9 +29,7 @@ Page({
         info,
       })
     }
-    this.setData({
-      scrollHeight:app.globalData.useableHeight
-    })
+
   },
   _getInfoById:function(){
     this.setData({

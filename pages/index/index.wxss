@@ -4,6 +4,7 @@
     width:100%;
     height:100%;
     position:relative;
+    overflow:hidden;
 }
 .index-box{
     position:absolute;
@@ -44,11 +45,14 @@
 .index-history{
     margin-top: 100rpx;
     width: 90%;
+    flex:1;
+    margin-bottom:120rpx;
+
 }
 .index-history-box{
     width:100%;
     margin-top: 30rpx;
-
+    overflow:scroll;
 }
 .index-history-item{
     padding: 30rpx;
@@ -100,4 +104,8 @@
 .index-history-icon{
     font-size:78rpx;
     color:#fff;
+}
+.index-no-history{
+    margin-top:30rpx;
+    text-align:center;
 }

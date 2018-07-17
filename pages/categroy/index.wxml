@@ -1,9 +1,9 @@
 <!--pages/categroy/index.wxml-->
-<scroll-view scroll-y style="height:{{scrollHeight}}rpx">
+<scroll-view scroll-y class="h_100">
   <picker wx:for="{{list}}" wx:key="{{index}}" bindchange="bindPickerChange" range="{{item.list}}" range-key="name" data-index="{{index}}">
     <view class="flex flex_row flex_align_center categroy-list-item bg_ffffff">
         <image src="../../assets/images/{{index}}.png" mode="widthFix" class="categroy-list-item-icon" ></image>
-        <text class="categroy-list-item-text ">{{item.name}}</text>
+        <text class="categroy-list-item-text font_weight_700">{{item.name}}</text>
     </view>
   </picker>
   <component-loading-page show="{{list==null}}"></component-loading-page>

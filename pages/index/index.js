@@ -7,7 +7,8 @@ Page({
     iptDisabled:true,
     value:'',
     historyRecord:null,
-    showHistory:false
+    showHistory:false,
+    switchTabPageUseableHeight:0
   },
   onShow:function () {
     let data = this._getItem('searchRecord')
@@ -18,6 +19,9 @@ Page({
   onReady:function () {
     var res = wx.getSystemInfoSync()
     app.globalData.switchTabPageUseableHeight = res.windowHeight * (750 / res.windowWidth);
+    this.setData({
+      switchTabPageUseableHeight:app.globalData.switchTabPageUseableHeight
+    })
   },
   tapSearchBox:function () {
     if(!this.data.iptDisabled) return;
