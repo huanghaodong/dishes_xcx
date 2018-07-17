@@ -6,7 +6,8 @@
     "pages/dishesList/index",
     "pages/searchDishesList/index",
     "pages/detail/index",
-    "pages/getUserInfoAuthority/index"
+    "pages/getUserInfoAuthority/index",
+    "pages/collection/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

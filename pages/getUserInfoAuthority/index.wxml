@@ -1,4 +1,5 @@
 <!--pages/getUserInfoAuthority/index.wxml-->
-<component-navigation-bar navigationBarTitleText="获取用户信息权限"></component-navigation-bar>
-<button wx:if="{{!hasGetUserInfoAuthority}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取用户信息权限 </button>
+<view class="h_100 flex flex_center">
+    <button wx:if="{{!hasGetUserInfoAuthority}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取用户信息权限 </button>
+</view>
 

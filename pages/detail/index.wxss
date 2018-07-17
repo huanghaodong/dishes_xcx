@@ -1,5 +1,8 @@
 /* pages/detail/index.wxss */
 
+.detail-box{
+    height:90%;
+}
 .detail-image{
     position: relative;
 }
@@ -114,4 +117,30 @@
     top:0;
     right:0;
     padding:20rpx;
+}
+.detail-foot{
+    height:10%;
+}
+.detail-foot button{
+    margin:0;
+    padding:0;
+    background-color:#ffffff;
+    line-height:inherit;
+    height:100%;
+    border-radius:0;
+    border:none;
+    font-size:60rpx;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+button::after{
+    border: none;
+
+}
+.detail-share-icon{
+    font-size:60rpx;
+}
+.detail-foot-icon{
+    font-size:60rpx;
 }

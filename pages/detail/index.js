@@ -2,6 +2,8 @@
 import util from '../../utils/util';
 const app = getApp();
 let id = 0;
+let collectionArr = [];
+let collectionIndex = -1;
 Page({
 
   /**
@@ -11,22 +13,27 @@ Page({
     info:null,
     showSwiper:false,
     current:0,
-    isError:false
+    isError:false,
+    hasCollecte:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if(options.isFromShare){
+    if(options.isFromShare||options.isFromCollection){
       id = +options.id;
       this._getInfoById()
+      this.setData({
+        hasCollecte:this._judgmentCollectionById(options.id)
+      })
     }else{
       let info = JSON.parse(options.item);
       let reg=/<[^>]+>/gim;
       info.content = info.content.replace(reg,"");
       this.setData({
         info,
+        hasCollecte:this._judgmentCollectionById(info.id)
       })
     }
 
@@ -100,5 +107,64 @@ Page({
    this.setData({
      current:e.detail.current
    })
-  }
+  },
+  toggleCollection:function () {
+    if(this.data.hasCollecte){
+      collectionArr.splice(collectionIndex,1);
+      this._setItem('collection',collectionArr);
+      this.setData({
+        hasCollecte:false
+      })
+      wx.showToast({
+        title: '收藏已取消',
+        icon:'none',
+        duration: 1000
+      })
+    }else{
+      collectionArr.unshift({
+        id:this.data.info.id,
+        name:this.data.info.name,
+        pic:this.data.info.pic,
+        remark:''
+      });
+      this._setItem('collection',collectionArr);
+      this.setData({
+        hasCollecte:true
+      })
+      wx.showToast({
+        title: '已收藏',
+        icon:'none',
+        duration: 1000
+      })
+    }
+  },
+  _judgmentCollectionById(id){
+    let tempBool = false;
+    collectionArr = this._getItem('collection')||[];
+    for(let i=0,len=collectionArr.length;i<len;i++){
+      if(collectionArr[i].id == id){
+        collectionIndex = i;
+        tempBool = true;
+        break;
+      }
+    }
+    return tempBool;
+  },
+  _setItem: function (item, data){
+    typeof data != 'string' && JSON.stringify(data)
+    wx.setStorageSync(item, data)
+  },
+
+  _getItem: function (item){
+    let info = wx.getStorageSync(item)
+    return info;
+  },
+  _removeItem: function(item){
+    try {
+      wx.removeStorageSync(item);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  },
 })

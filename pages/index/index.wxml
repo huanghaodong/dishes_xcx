@@ -23,8 +23,8 @@
                 <text class="iconfont icon-delete index-icon-deleteAll font_weight_600" bindtap="tapDeleteAll"></text>
             </view>
             <view class="index-no-history font_34rpx color_ffffff font_weight_600" hidden="{{historyRecord.length>0}}">暂无搜索历史</view>
-            <view class="flex_1 index-history-box  flex flex_row flex_warp flex">
-                <view class="index-history-item font_24 bg_ffffff flex flex_center" wx:for="{{historyRecord}}" wx:key="{{index}}" data-value="{{item}}" bindtap="tapSearchItem">
+            <view class="flex_1 index-history-box  flex flex_row flex_warp flex flex_align_start">
+                <view class="index-history-item font_24 bg_ffffff flex flex_center " wx:for="{{historyRecord}}" wx:key="{{index}}" data-value="{{item}}" bindtap="tapSearchItem">
                     {{item}}
                     <text class="iconfont icon-close index-icon-close" data-value="{{item}}" data-index="{{index}}" catchtap="tapDelete"></text>
                 </view>

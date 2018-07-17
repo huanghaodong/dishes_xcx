@@ -20,7 +20,7 @@ Page({
     keyword = options.keyword;
     this.getDishesListBySearch(keyword);
   },
-  onReady:function () {
+
 
   pushToDetail: function (e) {
     let item = e.currentTarget.dataset.item;

@@ -1,8 +1,27 @@
 <!--pages/me/index.wxml-->
-<view class="me bg_ffffff w_100 h_100 flex flex_col flex_align_center">
-    <image src="{{info.avatarUrl}}" class="me-image" />
-    <view class="me-name color_000000 font_weight_600 font_36">{{info.nickName}}</view>
-     <image src="../../assets/images/logo.jpeg" class="me-image-logo" />
-    <view class="me_qq w_100">QQ:534634672</view>
-    <view class="me_tips w_100">本小程序数据由https://way.jd.com/提供</view>
+<view class="me w_100 h_100 flex flex_col">
+    <view class="me-info-box bg_ffffff flex flex_row flex_align_center">
+        <image src="{{info.avatarUrl}}" class="me-image" />
+        <view class="me-name color_000000 font_weight_600 font_36">{{info.nickName}}</view>
+    </view>
+    <view class="me-useable-box flex_1 bg_ffffff">
+        <view class="me-useable-item flex flex_row flex_justify_between flex_align_center" bindtap="pushToCollection">
+            <view class="flex flex_row flex_align_center">
+                <text class="iconfont icon-shoucang"></text>
+                <text class="font_28 color_000000 me-useable-item-text">我的收藏</text>
+            </view>
+            <text class="iconfont icon-right"></text>
+        </view>
+        <view class="me-useable-item flex flex_row flex_justify_between flex_align_center">
+            <view class="flex flex_row flex_align_center">
+                <text class="iconfont icon-lianxi"></text>
+                <text class="font_28 color_000000 me-useable-item-text">联系我们</text>
+            </view>
+            <text class="iconfont icon-right"></text>
+        </view>
+    </view>
+    <view class="me_tips w_100 ">
+        <view>QQ:534634672</view>
+        <view>本小程序数据由https://way.jd.com/提供</view>
+    </view>
 </view>

@@ -16,5 +16,10 @@ Page({
     this.setData({
       info:app.globalData.userInfo
     })
+  },
+  pushToCollection: function () {
+    wx.navigateTo({
+      url: "/pages/collection/index",
+    })
   }
 })

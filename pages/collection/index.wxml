@@ -1,0 +1,33 @@
+<!--pages/me/index.wxml-->
+<view class="w_100 h_100 bg_ffffff">
+    <view class="collection-box">
+        <view class="collection-set-box flex flex_row flex_justify_between flex_align_center">
+            <text class="font_32 {{isEdit?'color_ceeec3':'color_00b26a'}}" bindtap="{{isEdit?'':'toEdit'}}" >编辑</text>
+            <text class="font_32 color_00b26a" bindtap="toCancle">{{isEdit?'取消':''}}</text>
+        </view>
+        <view class="collection-item flex flex_row flex_justify_between flex_align_center" wx:for="{{list}}" wx:key="{{index}}" bindtap="pushToDetail" data-index="{{index}}">
+            <view class="flex flex_row flex_align_center">
+                <image class="collection-item-left-img" src="{{item.pic}}"></image>
+                <view class="collection-item-left-cot flex flex_col flex_justify_between">
+                     <text class="font_28 color_000000">{{item.name}}</text>
+                     <text class="font_24 color_8a8a8a">备注：{{item.remark}}</text>
+                </view>
+            </view>
+            <view class="collection-item-right flex flex_row flex_align_center" style="transform:translateX({{isEdit?0:'200%'}})">
+                 <text class="iconfont icon-edit" catchtap="editCollection" data-index="{{index}}"></text>
+                 <text class="iconfont icon-delete collection-item-right_delete" catchtap="deleteCollection" data-index="{{index}}"></text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="{{showEditModal?'show':'hide'}}">
+    <view class="modal  flex flex_justify_center">
+        <view class="modal-input-box bg_ffffff flex flex_row flex_align_center">
+            <input class="modal-input font_24 flex_1" placeholder="请输入备注" maxlength="20" value="{{value}}" bindinput="input" bindconfirm="confirm" />
+            <view class="modal-sure font_32 color_00b26a" bindtap="sure">确定</view>
+        </view>
+       <view class="modal-box-close " bindtap="hideEditCollection">
+           <text class="iconfont icon-close color_ffffff"></text>
+       </view>
+    </view>
+</view>

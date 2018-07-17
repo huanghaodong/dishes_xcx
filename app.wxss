@@ -21,6 +21,18 @@ page{
 .color_ff6a37{
     color:#ff6a37;
 }
+.color_8a8a8a{
+    color:#8a8a8a;
+}
+.color_00b26a{
+    color:#00b26a;
+}
+.color_ceeec3{
+    color:#ceeec3;
+}
+.color_dd4c47{
+    color:#dd4c47;
+}
 /**背景颜色**/
 .bg_ffffff{
     background-color:#ffffff;
@@ -31,6 +43,7 @@ page{
 .bg_1296db{
     background-color:#1296db;
 }
+
 /**字体大小**/
 .font_16{
     font-size: 16rpx;
@@ -55,5 +68,23 @@ page{
 }
 .font_50{
     font-size:50rpx;
+}
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+.show .modal{
+    display:flex;
+}
+.hide .modal{
+    display:none;
 }
 
