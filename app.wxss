@@ -33,6 +33,12 @@ page{
 .color_dd4c47{
     color:#dd4c47;
 }
+.color_bbbbbb{
+    color:#bbbbbb;
+}
+.color_cccccc{
+    color:#cccccc;
+}
 /**背景颜色**/
 .bg_ffffff{
     background-color:#ffffff;

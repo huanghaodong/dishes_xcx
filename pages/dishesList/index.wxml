@@ -9,7 +9,7 @@
             <text class="dishesList-list-item-peoplenum font_24 color_ff6a37">{{item.peoplenum}}</text>
             <text class="dishesList-list-item-preparetime font_24 color_ff6a37" >{{item.preparetime}}</text>
             <view class="dishesList-list-item-tags flex flex_row">
-                <view class="dishesList-list-tag font_16 tag-style-{{index}}" wx:for="{{item.tag}}" wx:if="{{index<5}}">{{item}}</view>
+                <view class="dishesList-list-tag font_16 tag-style-{{index}}" wx:for="{{item.tag}}" wx:key="{{index}}" wx:if="{{index<5}}">{{item}}</view>
             </view>
         </view>
     </view>

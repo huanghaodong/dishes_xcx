@@ -132,7 +132,7 @@ Page({
         hasCollecte:true
       })
       wx.showToast({
-        title: '已收藏',
+        title: '收藏成功，<我的-我的收藏>中查看',
         icon:'none',
         duration: 1000
       })

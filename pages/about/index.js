@@ -21,10 +21,5 @@ Page({
     wx.navigateTo({
       url: "/pages/collection/index",
     })
-  },
-  pushToAbout: function () {
-    wx.navigateTo({
-      url: "/pages/about/index",
-    })
   }
 })

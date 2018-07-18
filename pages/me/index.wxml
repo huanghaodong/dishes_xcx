@@ -12,16 +12,12 @@
             </view>
             <text class="iconfont icon-right"></text>
         </view>
-        <view class="me-useable-item flex flex_row flex_justify_between flex_align_center">
+        <view class="me-useable-item flex flex_row flex_justify_between flex_align_center" bindtap="pushToAbout">
             <view class="flex flex_row flex_align_center">
-                <text class="iconfont icon-lianxi"></text>
-                <text class="font_28 color_000000 me-useable-item-text">联系我们</text>
+                <text class="iconfont icon-guanyuwomen"></text>
+                <text class="font_28 color_000000 me-useable-item-text">关于我们</text>
             </view>
             <text class="iconfont icon-right"></text>
         </view>
-    </view>
-    <view class="me_tips w_100 ">
-        <view>QQ:534634672</view>
-        <view>本小程序数据由https://way.jd.com/提供</view>
     </view>
 </view>

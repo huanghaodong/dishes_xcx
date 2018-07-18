@@ -86,7 +86,8 @@
     margin-top: 30rpx;
 }
 .detail-process-image{
-    width: 60%;
+    width: 450rpx;
+    height:450rpx;
 }
 .detail-share{
     position:fixed;

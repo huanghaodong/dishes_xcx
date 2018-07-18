@@ -7,7 +7,8 @@
     "pages/searchDishesList/index",
     "pages/detail/index",
     "pages/getUserInfoAuthority/index",
-    "pages/collection/index"
+    "pages/collection/index",
+    "pages/about/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

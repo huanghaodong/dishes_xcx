@@ -33,13 +33,27 @@ Page({
     })
   },
   deleteCollection:function(e){
-    let {index} = e.currentTarget.dataset;
-    let tempArr = this.data.list;
-    tempArr.splice(index,1);
-    this._setItem('collection',tempArr);
-    this.setData({
-      list:tempArr
+    let that = this;
+    wx.showModal({
+      title: '提示',
+      content: '确定删除该收藏吗？',
+      confirmColor: '#1296db',
+      cancelColor: '#4E586E',
+      success: function (res) {
+        if (res.confirm) {
+          let {index} = e.currentTarget.dataset;
+          let tempArr = that.data.list;
+          tempArr.splice(index,1);
+          that._setItem('collection',tempArr);
+          that.setData({
+            list:tempArr
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
     })
+
   },
   editCollection:function(e){
     editIndex = e.currentTarget.dataset.index;

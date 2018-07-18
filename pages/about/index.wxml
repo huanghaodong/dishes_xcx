@@ -1,0 +1,10 @@
+<!--pages/me/index.wxml-->
+<view class="about w_100 h_100 flex flex_col flex_align_center">
+    <image class="about-image-logo" src="../../assets/images/logo.jpeg"></image>
+    <text class="color_1296db font_28 font_weight_600" style="text-decoration:underline;font-style:italic">Discover more delicious</text>
+    <view class="about_tips w_100 ">
+        <view>QQ:534634672</view>
+        <view>本小程序数据由https://way.jd.com/提供</view>
+        <view>本程序专为思思提供，旨在让她多做点好吃的。</view>
+    </view>
+</view>
