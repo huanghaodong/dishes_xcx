@@ -11,13 +11,14 @@ Page({
     list:null,
     isEdit:false,
     showEditModal:false,
-    value:''
+    value:'',
+    focus:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onShow: function (options) {
     this.setData({
       list:this._getItem('collection')||[]
     })
@@ -60,6 +61,7 @@ Page({
     this.setData({
       showEditModal:true,
       value:this.data.list[editIndex].remark,
+      focus:true
     })
   },
   hideEditCollection:function(){

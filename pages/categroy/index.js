@@ -26,7 +26,7 @@ Page({
       url: "/pages/dishesList/index?classid="+classId,
     })
   },
-  refresh:function(){
+  onPullDownRefresh:function(){
     this._getCategroy();
   },
   _getCategroy:function(){
@@ -35,10 +35,12 @@ Page({
       isError:false
     })
     util.post('jisuapi/recipe_class',{},(data)=>{
+      wx.stopPullDownRefresh()
       this.setData({
         list:data.result
       })
     },(msg)=>{
+      wx.stopPullDownRefresh()
       this.setData({
         list:[],
         isError:true

@@ -138,6 +138,11 @@ Page({
       })
     }
   },
+  backToIndex:function(){
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
+  },
   _judgmentCollectionById(id){
     let tempBool = false;
     collectionArr = this._getItem('collection')||[];

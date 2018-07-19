@@ -40,10 +40,6 @@ Page({
   //根据分类id获取菜品列表
   getDishesByClassId:function () {
     let {classid,start,num} = this.data;
-    this.setData({
-      list:null,
-      isError:false
-    })
     util.post('jisuapi/byclass',{
       classid,
       start,
@@ -67,7 +63,8 @@ Page({
       data.result.list.forEach((v)=>{
         v.tag = v.tag.split(',');
       })
-      let arr = this.data.start == 0  ? data.result.list : this.data.list.concat(data.result.list);
+      let temArr = this.data.list == null?[]:this.data.list;
+      let arr = this.data.start == 0  ? data.result.list : temArr.concat(data.result.list);
       this.setData({
         list:arr
       })

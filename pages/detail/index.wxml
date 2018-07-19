@@ -46,6 +46,9 @@
     <view class="flex_1 flex_shrink_0 flex flex_center" bindtap="toggleCollection">
         <text class="iconfont {{hasCollecte?'icon-shoucang1 color_dd4c47':'icon-shoucang'}} detail-foot-icon"></text>
     </view>
+    <view class="flex_1 flex_shrink_0 flex flex_center" bindtap="backToIndex">
+        <text class="iconfont icon-home detail-foot-icon"></text>
+    </view>
     <view class="flex_1 flex_shrink_0">
         <button open-type="share">
              <text class="iconfont icon-20 detail-share-icon font-weight_700"></text>

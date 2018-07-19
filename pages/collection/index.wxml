@@ -26,7 +26,7 @@
 <view class="{{showEditModal?'show':'hide'}}">
     <view class="modal  flex flex_justify_center">
         <view class="modal-input-box bg_ffffff flex flex_row flex_align_center">
-            <input class="modal-input font_24 flex_1" placeholder="请输入备注" maxlength="20" value="{{value}}" bindinput="input" bindconfirm="confirm" />
+            <input focus="{{focus}}" class="modal-input font_24 flex_1" placeholder="请输入备注" maxlength="20" value="{{value}}" bindinput="input" bindconfirm="confirm" />
             <view class="modal-sure font_32 color_00b26a" bindtap="sure">确定</view>
         </view>
        <view class="modal-box-close " bindtap="hideEditCollection">
