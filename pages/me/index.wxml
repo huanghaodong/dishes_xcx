@@ -19,5 +19,12 @@
             </view>
             <text class="iconfont icon-right"></text>
         </view>
+        <button open-type="feedback">
+            <view class="flex flex_row flex_align_center">
+                <text class="iconfont icon-btnEdit"></text>
+                <text class="font_28 color_000000 me-useable-item-text">意见反馈</text>
+            </view>
+            <text class="iconfont icon-right"></text>
+        </button>
     </view>
 </view>

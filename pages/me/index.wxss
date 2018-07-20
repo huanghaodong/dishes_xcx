@@ -32,3 +32,21 @@
 .me-useable-item-text{
     margin-left:100rpx;
 }
+.me-useable-box button{
+    height:100rpx;
+    margin:0;
+    padding:0;
+    background-color:#ffffff;
+    line-height:inherit;
+    border-radius:0;
+    border:none;
+    border-bottom:1rpx solid #f1f1f1;
+    font-size:28rpx;
+    color:#000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+button::after{
+    border: none;
+}
